@@ -1,0 +1,41 @@
+nav.top-bar{data-top-bar}
+  ul.title-area
+    li.name
+      h1
+        a href='#'
+          i.fa.fa-home
+
+
+    li.toggle-topbar.menu-icon
+      a href='#'
+        span Menu
+  section.top-bar-section
+    ul
+      /!ko foreach: router.navigationModel
+      li data-bind="css: { active: isActive }"
+        a data-bind="attr: { href: hash }, text: title"
+      /!/ko
+
+
+    ul.right
+      li.loader data-bind="css: { active: router.isNavigating }"
+        i.fa.fa-spinner.fa-spin.fa-2x
+      li.has-form
+        .row.collapse
+          .small-9.large-8.columns
+            form data-bind="submit:search" role="search"
+              input placeholder="Search" type="text"
+          .small-3.large-4.columns
+            a.alert.button.expand href="#" Search
+
+.row
+  .small-12.columns.side-menu
+    ul
+      li: label Side navigation
+      li: a href="#" Link 1
+      li: a href="#" Link 2
+      li: a href="#" Link 3
+      li: a href="#" Link 4
+
+
+  .small-12.columns.main-content data-bind="router: { transition:'entrance_with_menu' }"

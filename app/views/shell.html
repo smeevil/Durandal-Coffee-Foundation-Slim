@@ -1,0 +1,60 @@
+<nav class="top-bar" data-top-bar="">
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <a href="#"><i class="fa fa-home"></i></a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
+      <a href="#"><span>Menu</span></a>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul>
+      <!--ko foreach: router.navigationModel-->
+      <li data-bind="css: { active: isActive }">
+        <a data-bind="attr: { href: hash }, text: title"></a>
+      </li>
+      <!--/ko-->
+    </ul>
+    <ul class="right">
+      <li class="loader" data-bind="css: { active: router.isNavigating }">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+      </li>
+      <li class="has-form">
+        <div class="row collapse">
+          <div class="small-9 large-8 columns">
+            <form data-bind="submit:search" role="search">
+              <input placeholder="Search" type="text" />
+            </form>
+          </div>
+          <div class="small-3 large-4 columns">
+            <a class="alert button expand" href="#">Search</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</nav>
+<div class="row">
+  <div class="small-12 columns side-menu">
+    <ul>
+      <li>
+        <label>Side navigation</label>
+      </li>
+      <li>
+        <a href="#">Link 1</a>
+      </li>
+      <li>
+        <a href="#">Link 2</a>
+      </li>
+      <li>
+        <a href="#">Link 3</a>
+      </li>
+      <li>
+        <a href="#">Link 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="small-12 columns main-content" data-bind="router: { transition:&#39;entrance_with_menu&#39; }"></div>
+</div>

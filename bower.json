@@ -1,0 +1,14 @@
+{
+  "name": "foundation-compass-app",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "durandal": "BlueSpire/Durandal-Bower",
+    "knockout-mapping": "SteveSanderson/knockout.mapping",
+    "font-awesome": "interval-braining/font-awesome-bower"
+  },
+  "resolutions": {
+    "jquery": "1.9.1"
+  }
+}

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="small-12 columns">
+    <h1 data-bind="text:displayName"></h1>
+    <blockquote data-bind="text:description"></blockquote>
+    <ul>
+      <li>
+        <div class="label">
+          country :
+        </div>
+        <span class="identifier" data-bind="text: ip.country"></span>
+      </li>
+      <li>
+        <div class="label">
+          ip :
+        </div>
+        <span class="msisdn" data-bind="text: ip.query"></span>
+      </li>
+      <li>
+        <div class="label">
+          regionName
+        </div>
+        <span class="region" data-bind="text:ip.regionName"></span>
+      </li>
+      <li>
+        <div class="label">
+          city
+        </div>
+        <span class="region" data-bind="text:ip.city"></span>
+      </li>
+      <li>
+        <div class="label">
+          timezone
+        </div>
+        <span class="region" data-bind="text:ip.timezone"></span>
+      </li>
+      <li>
+        <div class="label">
+          isp
+        </div>
+        <span class="region" data-bind="text:ip.isp"></span>
+      </li>
+    </ul>
+  </div>
+</div>

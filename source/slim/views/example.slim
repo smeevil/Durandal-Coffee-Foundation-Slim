@@ -1,0 +1,23 @@
+.row
+  .small-12.columns
+    h1 data-bind="text:displayName"
+    blockquote data-bind="text:description"
+    ul
+      li
+        .label country :
+        span.identifier data-bind="text: ip.country"
+      li
+        .label ip :
+        span.msisdn data-bind="text: ip.query"
+      li
+        .label regionName
+        span.region data-bind="text:ip.regionName"
+      li
+        .label city
+        span.region data-bind="text:ip.city"
+      li
+        .label timezone
+        span.region data-bind="text:ip.timezone"
+      li
+        .label isp
+        span.region data-bind="text:ip.isp"
